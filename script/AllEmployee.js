@@ -2,7 +2,6 @@ const employeesContainerEle = document.getElementById("employees-container");
 
 
 
-
 async function getAllEmployees(){
     try{
         // let res = await fetch(`${import.meta.env.BASE_URL}/employee`);
