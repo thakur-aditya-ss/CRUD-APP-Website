@@ -59,10 +59,36 @@ function displayEmployees(getAllEmployees){
             <button class="btn delete-btn" data-id="${emp.id}">Delete</button>
         </footer>
         `;
-       
+       // apply click event in deleteBtn
+        const deleteBtn = empCard.querySelector(".delete-btn");
+        deleteBtn.addEventListener("click", () => {
+            handleDelete(emp.id);
+        });
+
+        const editBtn = empCard.querySelector(".edit-btn");
+        editBtn.addEventListener("click", ()=> {
+            handleEdit(emp.id);
+        });
 
         employeesContainerEle.append(empCard);
 
     });
+
+}
+
+function handleDelete(id){
+    console.log(id);
+    try{
+        let resp = fetch(`http://localhost:5000/employees/${id}`,{
+            method: "DELETE",
+    });
+    } catch(error){
+        console.log(error);
+        alert("Unable to delete ❌");
+    }   
+}
+
+function handleEdit(id){
+    window.location.href = `EditEmployee.html?id=${id}`;
 
 }

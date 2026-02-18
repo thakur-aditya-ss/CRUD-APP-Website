@@ -1,40 +1,6 @@
 {
   "employees": [
     {
-      "id": "42bd",
-      "firstname": "Aditya",
-      "middlename": "",
-      "lastname": "Singh",
-      "dob": "0003-12-12",
-      "email": "aaasingh1010@gmail.com",
-      "maritalStatus": "Married",
-      "phoneNo": "1234567890",
-      "address": {
-        "street": "1234567890-=sdfghjkl",
-        "city": "",
-        "state": "",
-        "country": "",
-        "zipcode": ""
-      }
-    },
-    {
-      "id": "b2e3",
-      "firstname": "Aditya",
-      "middlename": "",
-      "lastname": "Singh",
-      "dob": "0003-12-12",
-      "email": "aaasingh1010@gmail.com",
-      "maritalStatus": "Married",
-      "phoneNo": "1234567890",
-      "address": {
-        "street": "1234567890-=sdfghjkl",
-        "city": "Sultanpur",
-        "state": "5678",
-        "country": "sdfghjk",
-        "zipcode": "123456"
-      }
-    },
-    {
       "id": "b9a6",
       "firstname": "Aditya",
       "middlename": "",

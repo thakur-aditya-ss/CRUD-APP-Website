@@ -1,4 +1,6 @@
 /* ================== RESET & GLOBAL ================== */
+
+/**
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +19,7 @@ a {
   color: inherit;
 }
 
-/* ================== NAVBAR ================== */
+// ================== NAVBAR ================== 
 .navbar-container {
   height: 80px;
   width: 100%;
@@ -51,4 +53,248 @@ a {
 .nav-links a:hover {
   background: #ffffff;
   color: #0a1f44;
+}
+  */
+
+  /* ================== RESET & GLOBAL ================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #0f172a;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================== NAVBAR ================== */
+.navbar-container {
+  height: 72px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.025em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-links a {
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #64748b;
+}
+
+.nav-links a:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* ================== PAGE CONTENT ================== */
+h1 {
+  text-align: center;
+  margin: 48px 0 32px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -0.025em;
+}
+
+#employees-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+  padding: 0 5% 60px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ================== EMPLOYEE CARD ================== */
+.emp-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 
+    0 4px 6px -1px rgb(0 0 0 / 0.05), 
+    0 2px 4px -2px rgb(0 0 0 / 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.emp-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 25px -5px rgb(0 0 0 / 0.1), 
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border-color: #dbeafe;
+}
+
+.emp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.emp-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.3;
+}
+
+.emp-id {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #eff6ff;
+  color: #3b82f6;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  letter-spacing: 0.025em;
+}
+
+.emp-info, .emp-contact, .emp-address {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.emp-info p, .emp-contact p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9375rem;
+  color: #475569;
+}
+
+.emp-info strong, .emp-contact strong {
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.emp-address p:first-child {
+  font-weight: 600;
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin-bottom: 4px;
+}
+
+.emp-address p:last-child {
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  color: #334155;
+  line-height: 1.6;
+  border: 1px solid #f1f5f9;
+}
+
+.emp-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.875rem;
+}
+
+.edit-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #2563eb;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.delete-btn {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+  color: #dc2626;
+  transform: scale(1.02);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(24px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.emp-card {
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Add a subtle staggered delay for cards */
+.emp-card:nth-child(1) { animation-delay: 0.1s; }
+.emp-card:nth-child(2) { animation-delay: 0.2s; }
+.emp-card:nth-child(3) { animation-delay: 0.3s; }
+.emp-card:nth-child(4) { animation-delay: 0.4s; }
+.emp-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  h1 { font-size: 1.75rem; margin: 32px 0; }
+  #employees-container { padding: 0 20px 40px; }
+  .navbar-container { padding: 0 20px; }
+  .nav-links a { padding: 8px 12px; }
 }
